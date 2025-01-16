@@ -162,10 +162,11 @@ export default function BurgerMenu() {
                   onClick={() => setSelectedBurger(burger)}
                 >
                   <Image
-                    src={burger.image || "/placeholder.svg"}
+                    src={burger.image}
                     alt={burger.name}
-                    fill
-                    className="object-cover"
+                    width={800}
+                    height={600}
+                    priority={false}
                   />
                 </div>
                 <div className="p-5">
