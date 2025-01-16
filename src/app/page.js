@@ -6,7 +6,7 @@ export default function page() {
     return (
         <div>
             <Categories />
-            <Korzinka />
+            {/* <Korzinka /> */}
         </div>
     );
 }

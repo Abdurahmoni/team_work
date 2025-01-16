@@ -28,8 +28,8 @@ export default function Korzinka() {
             image: "./hotdog.png",
         },
     ]);
-    const [isCartOpen, setIsCartOpen] = useState(false); // Корзина очилган/ёпилган ҳолати
-    const [isMobile, setIsMobile] = useState(false); // Мобил ёки десктоп экран ҳолати
+    const [isCartOpen, setIsCartOpen] = useState(false); 
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleQuantityChange = (id, action) => {
         setItems((prevItems) =>
@@ -53,13 +53,12 @@ export default function Korzinka() {
         0
     );
 
-    // Ekran o'lchamini tekshirish
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768); // 768px dan kichik ekranlar uchun
+            setIsMobile(window.innerWidth < 768);
         };
 
-        handleResize(); // Boshlang'ich o'lchamni aniqlash
+        handleResize(); 
         window.addEventListener("resize", handleResize);
 
         return () => {
@@ -71,10 +70,9 @@ export default function Korzinka() {
         <div>
             {isMobile ? (
                 <div>
-                    {/* Sarlavha (faqat kichik ekranda ko'rinadi) */}
                     <div
                         className="flex justify-between items-center w-[300px] mb-4 bg-gray-100 p-4 rounded-lg cursor-pointer"
-                        onClick={() => setIsCartOpen(!isCartOpen)} // Bosilganda panelni ochadi/yopadi
+                        onClick={() => setIsCartOpen(!isCartOpen)}
                     >
                         <h2 className="text-lg font-bold">Корзина</h2>
                         <span className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-full">
@@ -82,7 +80,6 @@ export default function Korzinka() {
                         </span>
                     </div>
 
-                    {/* To'liq Корзина (panel faqat ochilganda ko'rinadi) */}
                     {isCartOpen && (
                         <div className="p-4 w-[300px] bg-white rounded-lg shadow-md">
                             <div className="space-y-4">
@@ -159,7 +156,6 @@ export default function Korzinka() {
                     )}
                 </div>
             ) : (
-                // To'liq Корзина (katta ekranda har doim ko'rinadi)
                 <div className="p-4 w-full max-w-sm bg-white rounded-lg shadow-md">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-lg font-bold">Корзина</h2>
