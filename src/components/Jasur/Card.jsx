@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import BurgerModal from "../components/Jasur/Burger-modal";
+import BurgerModal from "../Jasur/Burger-modal";
 
 export default function BurgerMenu() {
   const [cart, setCart] = useState([]);
