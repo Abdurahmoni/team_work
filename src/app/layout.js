@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Ozodbek/Navbar";
 import Footer from "@/components/Ozodbek/Footer";
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+const nunito = Nunito({
+    variable: "--font-nunito",
+    subsets: ["latin", "cyrillic"],
+    weight: ["300", "400", "500", "700", "900"],
 });
 
 export const metadata = {
@@ -21,11 +17,11 @@ export default function RootLayout({ children }) {
     return (
         <html className="h-full" lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased h-full flex flex-col`}
+                className={`${nunito.variable} font-nunito antialiased h-full flex flex-col`}
             >
                 <Navbar />
                 <main className="grow">{children}</main>
-                
+
                 <Footer />
             </body>
         </html>

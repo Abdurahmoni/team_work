@@ -37,8 +37,8 @@ export default function Categories() {
     ];
 
     return (
-        <div className="overflow-x-auto hide-scrollbar">
-            <div className="flex gap-3 w-max">
+        <div className="overflow-x-auto hide-scrollbar mt-10">
+            <div className="flex gap-10 w-max mx-auto">
                 {categories.map((category) => (
                     <div
                         key={category.name}
@@ -55,7 +55,7 @@ export default function Categories() {
                             width={24}
                             height={24}
                         />
-                        <p className="text-sm font-medium">{category.name}</p>
+                        <p className="text-sm font-medium px-4 py-1">{category.name}</p>
                     </div>
                 ))}
             </div>
