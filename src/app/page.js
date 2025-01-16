@@ -1,12 +1,12 @@
 import Categories from "@/components/Abdurahmon/Categories";
-import Korzinka from "@/components/Abdurahmon/Korzinka";
 import React from "react";
+import BurgerMenu from "../components/Jasur/Card";
 
 export default function page() {
     return (
         <div>
             <Categories />
-            {/* <Korzinka /> */}
+            <BurgerMenu />
         </div>
     );
 }
