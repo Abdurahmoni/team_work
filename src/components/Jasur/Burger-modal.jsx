@@ -13,7 +13,7 @@ export default function BurgerModal({ burger, isOpen, onClose, onAddToCart }) {
                     onClick={onClose}
                     className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
                 >
-                    <X size={24} />
+                    x{/* <X size={24} /> */}
                 </button>
 
                 <div className="p-8">
