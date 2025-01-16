@@ -37,7 +37,7 @@ export default function Categories() {
     ];
 
     return (
-        <div className="overflow-x-auto hide-scrollbar mt-10">
+        <div className="overflow-x-auto hide-scrollbar mt-20">
             <div className="flex gap-10 w-max mx-auto">
                 {categories.map((category) => (
                     <div

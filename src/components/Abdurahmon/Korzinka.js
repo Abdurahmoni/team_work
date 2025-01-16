@@ -28,7 +28,7 @@ export default function Korzinka() {
             image: "./hotdog.png",
         },
     ]);
-    const [isCartOpen, setIsCartOpen] = useState(false); 
+    const [isCartOpen, setIsCartOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
     const handleQuantityChange = (id, action) => {
@@ -58,7 +58,7 @@ export default function Korzinka() {
             setIsMobile(window.innerWidth < 768);
         };
 
-        handleResize(); 
+        handleResize();
         window.addEventListener("resize", handleResize);
 
         return () => {
